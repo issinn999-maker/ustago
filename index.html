@@ -1,183 +1,140 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
-<head
+<head>
     <meta charset="UTF-8">
     <title>UstaGo — услуги специалистов по всему Казахстану</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="UstaGo — платформа услуг и специалистов по всему Казахстану. Мастера, репетиторы, программисты, учителя и другие услуги.">
     <style>
-        body {<h1 style="color:red;text-align:center;">ЕСЛИ ЭТО ВИДНО — САЙТ ОБНОВИЛСЯ</h1>
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f6f8;
-        }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f4f6f8; }
+
         header {
-            background: #1e88e5;
+            background: linear-gradient(135deg,#1e88e5,#42a5f5);
             color: white;
-            padding: 45px 20px;
+            padding: 60px 20px;
             text-align: center;
+            position: relative;
         }
-        section {
-            padding: 35px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
-        h2 {
-            margin-bottom: 20px;
-        }
+
+        section { padding: 40px 20px; max-width: 1100px; margin: auto; }
+        h2 { text-align: center; margin-bottom: 20px; }
+
         .services {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
             gap: 16px;
         }
+
         .card {
             background: white;
-            padding: 18px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            font-size: 15px;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.25s;
         }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+        }
+
         .btn {
-            display: inline-block;
+            display: block;
             background: #1e88e5;
             color: white;
-            padding: 14px 22px;
-            text-decoration: none;
+            padding: 14px 24px;
             border-radius: 8px;
-            margin-top: 15px;
+            text-decoration: none;
+            width: fit-content;
+            margin: 20px auto;
+        }
+
+        /* КРАСИВАЯ КНОПКА WHATSAPP */
+        .whatsapp-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 30px;
+            text-decoration: none;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            z-index: 9999;
         }
-        .btn:hover {
-            background: #1669bb;
+        .whatsapp-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 18px rgba(0,0,0,0.35);
         }
-        select {
-            padding: 12px;
-            border-radius: 6px;
-            border: none;
-            font-size: 16px;
-            margin-top: 15px;
-        }
+
         footer {
             text-align: center;
             padding: 25px;
             color: #777;
-            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
+<!-- КНОПКА WHATSAPP -->
+<a href="https://wa.me/77071579507" class="whatsapp-btn" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="22">
+    Написать
+</a>
+
 <header>
     <h1>UstaGo</h1>
     <p>Найдите специалиста в своём городе</p>
-
-    <select>
-        <option>Выберите город</option>
-        <option>Астана</option>
-        <option>Алматы</option>
-        <option>Шымкент</option>
-        <option>Караганда</option>
-        <option>Актобе</option>
-        <option>Атырау</option>
-        <option>Павлодар</option>
-        <option>Костанай</option>
-        <option>Усть-Каменогорск</option>
-        <option>Тараз</option>
-        <option>Другой город</option>
-    </select>
-    <br>
 </header>
 
 <section>
-    <h2>Дом и быт</h2>
-    <div class="services">
-        <div class="card">🔧 Сантехника</div>
-        <div class="card">⚡ Электрика</div>
-        <div class="card">🧹 Уборка</div>
-        <div class="card">🛠 Ремонт</div>
-        <div class="card">🪚 Сборка мебели</div>
-        <div class="card">📦 Грузчики и курьеры</div>
-    </div>
+<h2>Дом и быт</h2>
+<div class="services">
+<a class="card" href="#form">🔧 Сантехника</a>
+<a class="card" href="#form">⚡ Электрика</a>
+<a class="card" href="#form">🧹 Уборка</a>
+<a class="card" href="#form">🛠 Ремонт</a>
+</div>
 </section>
 
 <section>
-    <h2>Образование</h2>
-    <div class="services">
-        <div class="card">📚 Репетиторы</div>
-        <div class="card">🇬🇧 Учитель английского</div>
-        <div class="card">💻 Программирование</div>
-        <div class="card">🧠 Подготовка к экзаменам</div>
-        <div class="card">🎓 Онлайн-обучение</div>
-    </div>
+<h2>Образование</h2>
+<div class="services">
+<a class="card" href="#form">📚 Репетиторы</a>
+<a class="card" href="#form">🇬🇧 Английский язык</a>
+<a class="card" href="#form">💻 Программирование</a>
+</div>
 </section>
 
 <section>
-    <h2>IT и цифровые услуги</h2>
-    <div class="services">
-        <div class="card">💻 Программисты</div>
-        <div class="card">🌐 Создание сайтов</div>
-        <div class="card">🎨 Дизайн</div>
-        <div class="card">📱 SMM и реклама</div>
-        <div class="card">🧩 IT-консультации</div>
-    </div>
+<h2>IT и бизнес</h2>
+<div class="services">
+<a class="card" href="#form">🌐 Создание сайтов</a>
+<a class="card" href="#form">🎨 Дизайн</a>
+<a class="card" href="#form">📱 Маркетинг</a>
+</div>
 </section>
 
-<section>
-    <h2>Бизнес и услуги</h2>
-    <div class="services">
-        <div class="card">📊 Бухгалтерия</div>
-        <div class="card">⚖️ Юридические консультации</div>
-        <div class="card">📝 Переводы и тексты</div>
-        <div class="card">📸 Фото и видео</div>
-        <div class="card">📈 Консалтинг</div>
-    </div>
-</section>
-
-<section>
-    <h2>Как это работает</h2>
-    <p>
-        1️⃣ Вы оставляете заявку<br>
-        2️⃣ Мы подбираем специалиста<br>
-        3️⃣ Специалист связывается с вами
-    </p>
-</section>
-
-<section>
 <section id="form">
-    <h2>Оставьте заявку</h2>
-    <p>Заполните форму, и мы свяжемся с вами в ближайшее время.</p>
-
-    <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSeuXA2d0zfmCr3yOi8XnZiCzuo_ructy-gB2f32yx6pYQBhLg/viewform?usp=dialog"
-        width="100%"
-        height="800"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0">
-    Загрузка…
-    </iframe>
+<h2>Оставить заявку</h2>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeuXA2d0zfmCr3yOi8XnZiCzuo_ructy-gB2f32yx6pYQBhLg/viewform?usp=dialog"
+width="100%" height="700"></iframe>
 </section>
-<a href="#specialist-form" class="btn">Стать специалистом</a>
-<!-- Секция с формой для специалистов -->
+
 <section id="specialist-form">
-    <h2>Стать специалистом</h2>
-    <p>Заполните форму, и мы свяжемся с вами для сотрудничества.</p>
-
-    <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfLhbh5fJ550nejDmNUmP0eKXtJ1a8HdccXYo4DlciNVhkmTw/viewform?usp=dialog"
-        width="100%"
-        height="800"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0">
-    Загрузка…
-    </iframe>
+<h2>Стать специалистом</h2>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLhbh5fJ550nejDmNUmP0eKXtJ1a8HdccXYo4DlciNVhkmTw/viewform?usp=dialog"
+width="100%" height="700"></iframe>
 </section>
-<!-- КНОПКА WHATSAPP -->
-<a href="https://wa.me/77071579507?text=Здравствуйте!%20Хочу%20заказать%20услугу%20через%20UstaGo" 
-   class="whatsapp-btn" target="_blank">
-    💬 Написать в WhatsApp
-</a>
 
+<footer>© 2026 UstaGo — Казахстан</
+    
 </body>
 </html>
